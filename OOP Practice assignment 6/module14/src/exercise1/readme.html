@@ -1,0 +1,60 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module14: Exercise #1: Use Basic Threads</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module14: Threads</H2>
+<H3>Exercise #1: Use Basic Threads</H3>
+<H3>(Level 1)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will have hands-on experience in the creation and running of threads.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+
+The purpose of this lab is to create three threads and run them at the same 
+time.  While are running they will be printing out their name into a textarea.
+by observing what is printed into the text area you can observe how the 
+threads run and in which order.
+
+<OL><TT></TT>
+
+  <LI>Create a class called <TT>PrintMe</TT> which implements <TT>Runnable</TT>.<BR>
+      In the <TT>run</TT> method, loop 10 times: print the name of the current
+      thread and then sleep for 2 seconds.
+      <P>
+
+  <LI>Create a program called <TT>TestThreeThreads</TT>.
+    <OL>
+      <LI>In the <TT>main</TT>, create an instance of <TT>PrintMe</TT>.
+      <LI>Create three threads using the <TT>PrintMe</TT> object.
+      <LI>Name each thread using the <TT>setName</TT> method.
+      <LI>Start each thread.
+    </OL>
+      <P>
+
+   <LI>Compile and run the <TT>TestThreeThreads</TT> program.
+      <P>
+
+</OL>
+
+<FONT COLOR=blue>Question:</FONT> can you explain the behavior of
+your program?
+</P>
+
+</BODY>
+
+</HTML>

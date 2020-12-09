@@ -1,0 +1,80 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module9: Exercise #4: Sort Customers</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module9: Text-Based Applications</H2>
+<H3>Exercise #4: Sort Customers</H3>
+<H3>(Level 3)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will sort the list of bank customers by their names.
+This will require you to have the <TT>Customer</TT> class implement the
+<TT>Comparable</TT> interface.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+Start by changing your working directory to <TT>SL275/mod09/exercise4</TT>
+on your computer.  Copy the previous Banking project files.
+</P>
+
+
+<OL>
+
+  <LI>Add the <TT>sortCustomers</TT> method to the <TT>Bank</TT> class.
+      <P>
+
+  <LI>Modify the <TT>Customer</TT> class to implement the <TT>Comparable</TT>
+      interface.  You will need to specify the <TT>compareTo</TT> method.
+      Make this method compare the two customers in a lexigraphical order
+      with the last name taking precedence over the first name.  For example,
+      "Joe Smith" should come before "Samuel Smith".
+      <P>
+
+  <LI>Modify the <TT>CustomerReport</TT> class to call the <TT>sortCustomers</TT>
+      method before generating the report.
+      <P>
+
+  <LI>Compile and run the <TT>TestBanking</TT> program.  You should see the
+      following output:
+<PRE>
+			CUSTOMERS REPORT
+			================
+
+Customer: Bryant, Owen
+    Checking Account: current balance is ¤200.00
+
+Customer: Simms, Jane
+    Savings Account: current balance is ¤500.00
+    Checking Account: current balance is ¤200.00
+
+Customer: Soley, Maria
+    Checking Account: current balance is ¤200.00
+    Savings Account: current balance is ¤150.00
+
+Customer: Soley, Tim
+    Savings Account: current balance is ¤1,500.00
+    Checking Account: current balance is ¤200.00
+</PRE>
+      <P>
+
+</OL>
+
+</P>
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,152 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module15: Exercise #2: Implement the Record Processing Streams</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module15: Advanced I/O Streams</H2>
+<H3>Exercise #2: Implement the Record Processing Streams</H3>
+<H3>(Level 2)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will write the <TT>RecordInputStream</TT> and
+<TT>RecordOutputStream</TT> filter stream classes based on a particular
+<TT>Record</TT> class.
+</P>
+
+
+<H3>Directions</H3>
+
+<CENTER> <IMG SRC="UML.gif" ALT="UML Diagram of Record and Processing Stream Classes"> </CENTER>
+
+<P>
+
+<H4>Write the <TT>Record</TT> Class</H4>
+
+<OL>
+
+  <LI>Implement the <TT>Record</TT> class as designed in the UML diagram, above.
+      <P>
+
+  <LI>Write a <TT>toString</TT> method that constructs a <TT>String</TT> that
+      includes all three fields.  See the output at the bottom of this page
+      to see how to format the string.
+      <P>
+
+</OL>
+
+<H4>Write the <TT>RecordOutputStream</TT> Class</H4>
+
+<OL>
+
+  <LI>Implement the <TT>RecordOutputStream</TT> class as designed in the UML diagram, above.
+      <P>
+
+  <LI>The constructor must pass the data output stream object to the super
+      class constructor (which accepts an output stream object).
+      <P>
+
+  <LI>The <TT>writeRecord</TT> method should use the inherited <TT>out</TT>
+      attribute.
+      <P>
+
+</OL>
+
+<H4>Write the <TT>RecordInputStream</TT> Class</H4>
+
+<OL>
+
+  <LI>Implement the <TT>RecordInputStream</TT> class as designed in the UML diagram, above.
+      <P>
+
+  <LI>The constructor must pass the data input stream object to the super
+      class constructor (which accepts an input stream object).
+      <P>
+
+  <LI>The <TT>readRecord</TT> method should use the inherited <TT>in</TT>
+      attribute.
+      <P>
+
+</OL>
+
+<H4>Complete the <TT>WriteRecords</TT> Program</H4>
+
+<P>
+This program creates five records and writes them to the file: <TT>record.db</TT>
+</P>
+
+<P>
+In the <TT>WriteRecord.java</TT> file you will find comment blocks
+that start and end with <TT>/*** ... ***/</TT>.  These comments indicate
+the location in the code that you must supply.
+</P>
+
+<OL>
+
+  <LI>Edit the <TT>WriteRecords</TT> class file to include the code
+      to declare and initialize the record output stream variable.  Name the
+      file containing the records: <TT>record.db</TT>.
+      <P>
+
+  <LI>Add the code to write the five records to the record output stream.
+      Don't forget to close the top-level stream.
+      <P>
+
+  <LI>Compile and run this program.  You will see the following output.
+      Also, the file <TT>record.db</TT> should now exist.
+<PRE>
+Five records have been saved to the 'record.db' file.
+</PRE>
+      <P>
+
+</OL>
+
+<H4>Complete the <TT>ReadRecords</TT> Program</H4>
+
+<P>
+This program assumes that five records have been written to the file: <TT>record.db</TT>
+This program will read the five records and print them out.
+</P>
+
+<P>
+In the <TT>ReadRecord.java</TT> file you will find comment blocks
+that start and end with <TT>/*** ... ***/</TT>.  These comments indicate
+the location in the code that you must supply.
+</P>
+
+<OL>
+
+  <LI>Edit the <TT>ReadRecords</TT> class file to include the code
+      to declare and initialize the record input stream variable.
+      <P>
+
+  <LI>Add the code to read the five records from the record output stream
+      and print out the record object to standard out.
+      Don't forget to close the top-level stream.
+      <P>
+
+  <LI>Compile and run this program.  You should see the following output.
+<PRE>
+Record['record #1', 2, 1.4142135623730951]
+Record['record #2', 3, 2.718281828459045]
+Record['record #3', 5, 3.141592653589793]
+Record['record #4', 7, 4.0]
+Record['record #5', 9, 5.859874482048838]
+</PRE>
+      <P>
+
+</OL>
+
+</P>
+
+</BODY>
+
+</HTML>

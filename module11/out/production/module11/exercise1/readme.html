@@ -1,0 +1,87 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module11: Exercise #1: Create a ChatClient GUI, Part II</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module11: GUI Event Handling</H2>
+<H3>Exercise #1: Create a ChatClient GUI, Part II</H3>
+<H3>(Level 1)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will implement the basic event handlers for the "chat room" GUI.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+Start by copying the <TT>ChatClient</TT> class file into your working directory.
+
+<OL>
+
+  <LI>Create an <TT>ActionListener</TT> which will copy the text from the
+      input textfield into the output textarea when the send button is
+      pressed.  Use an inner class to implement this because you will need
+      access to the <TT>ChatClient</TT>'s private attributes.
+      <P>
+
+  <LI>Create an <TT>ActionListener</TT> which will quit the program when the
+      quit button is pressed.
+      <FONT COLOR=blue>[HINT: use <TT>System.exit(0)</TT>]</FONT>
+      <P>
+
+  <LI>Create a <TT>WindowListener</TT> which will quit the program when the
+      close widget is pressed on the frame.
+      <P>
+
+  <LI>Create an <TT>ActionListener</TT> which will copy the text from the
+      input textfield into the output textarea when the <TT>&LT;Enter&GT;</TT>
+      key is pressed in the input textfield.
+      <P>
+
+  <LI>Modify the <TT>launchFrame</TT> method to add instances of your
+      listeners to the appropriate components.
+      <P>
+
+</OL>
+
+</P>
+
+
+<H3>Hints</H3>
+
+<P>
+
+<UL>
+
+  <LI>Have the listeners (inner classes) access the instance variables of
+      their containing class to refer to the components like the output textarea
+      and the input textfield.  Remember that you made the components instance
+      variables in the previous lab.
+      <P>
+
+  <LI>Also, don't forget to import the <TT>java.awt.event.*</TT> package.<BR>
+      <P>
+
+  <LI>To get the text from a <TT>TextArea</TT> or <TT>TextField</TT> you can
+      use the <TT>getText</TT> method; to set the text use <TT>setText</TT>
+      or <TT>append</TT>.
+      <P>
+
+</UL>
+
+</P>
+
+
+</BODY>
+
+</HTML>

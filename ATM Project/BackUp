@@ -1,0 +1,45 @@
+***
+username 1000
+password 123142
+cardNum 1000
+balance 72.0
+firstName Paul
+lastName Phoenix
+isTransferred false
+---
+***
+username 1001
+password 123123
+cardNum 1001
+balance 70.000
+firstName Marshall
+lastName Law
+isTransferred false
+---
+***
+username 1002
+password 123456
+cardNum 1002
+balance 599994.0
+firstName Kazuya
+lastName Mishima
+isTransferred false
+---
+***
+username 1003
+password 123456
+cardNum 1003
+balance 0.3
+firstName Yoshimitsu
+lastName no
+isTransferred false
+---
+***
+username 1004
+password 123456
+cardNum 1004
+balance 50000.0
+firstName Nina
+lastName Williams
+isTransferred false
+---

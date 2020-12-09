@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+		<rss xmlns:wsj="http://dowjones.net/rss/" xmlns:dj="http://dowjones.net/rss/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+<channel>
+<title>WSJ.com: World News</title>
+<link>http://online.wsj.com/page/2_0006.html</link>
+<atom:link type="application/rss+xml" rel="self" href="http://online.wsj.com/page/2_0006.html"/>
+<description>World News</description>
+<language>en-us</language>
+<pubDate>Sun, 24 Nov 2019 03:06:32 -0500</pubDate>
+<lastBuildDate>Sun, 24 Nov 2019 03:06:32 -0500</lastBuildDate>
+<copyright>Dow Jones &amp; Company, Inc.</copyright>
+<generator>http://online.wsj.com/page/2_0006.html</generator>
+<docs>http://cyber.law.harvard.edu/rss/rss.html</docs>
+<image>
+<title>WSJ.com: World News</title>
+<link>http://online.wsj.com/page/2_0006.html</link>
+<url>http://online.wsj.com/img/wsj_sm_logo.gif</url>
+</image>
+<item>
+<title>Pope Francis, in Nagasaki, Calls for Global Nuclear Disarmament</title>
+<link>https://www.wsj.com/articles/pope-francis-in-nagasaki-calls-for-global-nuclear-disarmament-11574572436</link>
+<description><![CDATA[Pope Francis called on nations with nuclear bombs to abandon them, even for deterrence, and warned of a new arms race from an erosion of multilateral agreements controlling weapons of mass destruction.]]></description>
+<content:encoded/>
+<pubDate>Sun, 24 Nov 2019 00:13:00 -0500</pubDate>
+<guid isPermaLink="false">SB11417192451204073582804586036972753946318</guid>
+<category domain="AccessClassName">PAID</category>
+<wsj:articletype>World News</wsj:articletype>
+</item>
+<item>
+<title>Protests in Colombia Stretch Into Third Day</title>
+<link>https://www.wsj.com/articles/protests-in-colombia-stretch-into-third-day-11574562934</link>
+<description><![CDATA[Marchers accused security forces of brutality and government officials claimed that an outbreak of looting and vandalism was part of an orchestrated terror campaign.]]></description>
+<content:encoded/>
+<pubDate>Sat, 23 Nov 2019 21:35:00 -0500</pubDate>
+<guid isPermaLink="false">SB11417192451204073582804586036663598826584</guid>
+<category domain="AccessClassName">PAID</category>
+<wsj:articletype>Latin America News</wsj:articletype>
+</item>
+<item>
+<title>Bolivia Legislators Rush to Approve New Election Without Morales</title>
+<link>https://www.wsj.com/articles/bolivia-marks-end-of-era-as-legislators-rush-to-approve-new-election-without-morales-11574537980</link>
+<description><![CDATA[Lawmakers rushed Saturday to approve legislation that paves the way for a new presidential election and bars the candidacy of Evo Morales, marking a new path for his socialist movement without its standard-bearer.]]></description>
+<content:encoded/>
+<pubDate>Sat, 23 Nov 2019 19:04:00 -0500</pubDate>
+<guid isPermaLink="false">SB11417192451204073582804586036192773282506</guid>
+<category domain="AccessClassName">PAID</category>
+<wsj:articletype>Latin America News</wsj:articletype>
+</item>
+<item>
+<title>Merkel's Coalition Government Faces Test Over Huawei Dispute</title>
+<link>https://www.wsj.com/articles/merkels-plans-to-allow-foreign-bids-for-germanys-5g-network-suffer-setback-11574507650</link>
+<description><![CDATA[Chancellor Angela Merkel was handed a damaging defeat at her party’s annual convention over her plans to allow China’s Huawei to build Germany’s next-generation 5G mobile network. ]]></description>
+<content:encoded/>
+<pubDate>Sat, 23 Nov 2019 07:36:00 -0500</pubDate>
+<guid isPermaLink="false">SB11417192451204073582804586035433710594342</guid>
+<category domain="AccessClassName">PAID</category>
+<wsj:articletype>Europe News</wsj:articletype>
+</item>
+<item>
+<title>At a Migrant Camp in Mexico, the Crowds and Complaints Swell</title>
+<link>https://www.wsj.com/articles/at-migrant-camp-in-mexico-crowds-and-complaints-swell-11574510400</link>
+<description><![CDATA[At a tent camp at the border in Matamoros, one of Mexico’s most dangerous cities, several thousand migrants await asylum hearings in the U.S. Some say they qualify to enter the U.S. immediately but have been rejected.]]></description>
+<content:encoded/>
+<pubDate>Sat, 23 Nov 2019 07:00:00 -0500</pubDate>
+<guid isPermaLink="false">SB12576833327258353522604586033602406950530</guid>
+<category domain="AccessClassName">PAID</category>
+<wsj:articletype>Politics and Policy</wsj:articletype>
+</item>
+<item>
+<title>Global Wave of Protests Rattles Governments</title>
+<link>https://www.wsj.com/articles/global-wave-of-protests-rattles-governments-11574438994</link>
+<description><![CDATA[It started in Hong Kong in June, when hundreds of thousands of young demonstrators connected by messaging apps took to the streets. Four months on, antigovernment demonstrations have swept more than a dozen countries.]]></description>
+<content:encoded/>
+<pubDate>Fri, 22 Nov 2019 11:09:00 -0500</pubDate>
+<guid isPermaLink="false">SB10304327337654353805304586015954293006190</guid>
+<category domain="AccessClassName">PAID</category>
+<wsj:articletype>World News</wsj:articletype>
+</item>
+<item>
+<title>Millions of Hong Kongers to Take to the Streets Again---This Time to Vote</title>
+<link>https://www.wsj.com/articles/millions-of-hong-kongers-to-take-to-the-streets-againthis-time-to-vote-11574426254</link>
+<description><![CDATA[Voters head to the polls Sunday for scheduled district elections that may offer residents a political outlet to vent frustrations after months of violent clashes between protesters and police.]]></description>
+<content:encoded/>
+<pubDate>Fri, 22 Nov 2019 07:37:00 -0500</pubDate>
+<guid isPermaLink="false">SB12576833327258353522604586033430349653662</guid>
+<category domain="AccessClassName">PAID</category>
+<wsj:articletype>China News</wsj:articletype>
+</item>
+<item>
+<title>Trump Calls Hong Kong Protests 'Complicating Factor' in Trade Talks</title>
+<link>https://www.wsj.com/articles/xi-jinping-calls-for-u-s-china-cooperation-at-critical-juncture-11574422912</link>
+<description><![CDATA[President Trump called antigovernment protests in Hong Kong a “complicating factor” in his bid for a trade deal with China and didn’t say whether he would sign a bill passed by Congress supporting the protesters.]]></description>
+<content:encoded/>
+<pubDate>Fri, 22 Nov 2019 19:24:00 -0500</pubDate>
+<guid isPermaLink="false">SB12576833327258353522604586033472187577068</guid>
+<category domain="AccessClassName">PAID</category>
+<wsj:articletype>China News</wsj:articletype>
+</item>
+</channel>
+</rss>

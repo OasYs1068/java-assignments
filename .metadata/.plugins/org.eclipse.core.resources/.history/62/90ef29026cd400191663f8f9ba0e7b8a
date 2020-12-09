@@ -1,0 +1,23 @@
+package exercise3;
+
+public class StringSearch {
+		private String str1,str2;
+		
+		String string1,string2;
+		
+		public StringSearch(String paraStr1,String paraStr2) {
+			str1 = paraStr1;
+			str2 = paraStr2;
+			string1 = new String(str1);
+			string2 = new String(str2);
+		}
+		
+		public int getLength() {
+			return String.length();
+		}
+		
+		public boolean isSubString(String[] para1,String[] para2) {
+			
+		}
+		
+}

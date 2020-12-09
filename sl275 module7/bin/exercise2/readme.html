@@ -1,0 +1,101 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module7: Exercise #2: Use Interfaces and Abstract Classes</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module7: Advanced Class Features</H2>
+<H3>Exercise #2: Use Interfaces and Abstract Classes</H3>
+<H3>(Level 2)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will create a hierarchy of animals that is rooted in
+an abstract class <TT>Animal</TT>. Several of the animal classes will
+implement an interface called <TT>Pet</TT>. You will experiment with
+variations of these animals, their methods, and polymorphism.
+</P>
+
+
+<H3>Directions</H3>
+
+<CENTER> <IMG SRC="UML.gif" ALT="UML Diagram of the Animal/Pet Hierarchy"> </CENTER>
+
+<P>
+
+<OL>
+
+  <LI>Create the <TT>Animal</TT> class, which is the abstract superclass of
+      all animals.
+      <OL>
+        <LI>Declare a protected integer attribute called <TT>legs</TT>, which
+	    records the number of legs for this animal.
+        <LI>Define a protected constructor that initializes the <TT>legs</TT> attribute.
+        <LI>Declare an abstract method <TT>eat</TT>.
+        <LI>Declare a concrete method <TT>walk</TT> that prints out something
+	    about how the animals walks (include the number of legs).
+      </OL>
+      <P>
+
+  <LI>Create the <TT>Spider</TT> class.
+      <OL>
+        <LI>The <TT>Spider</TT> class extends the <TT>Animal</TT> class.
+        <LI>Define a default constructor that calls the superclass constructor
+	    to specify that all spiders have eight legs.
+        <LI>Implement the <TT>eat</TT> method.
+      </OL>
+      <P>
+
+  <LI>Create the <TT>Pet</TT> interface specified by the UML diagram.
+      <P>
+
+  <LI>Create the <TT>Cat</TT> class that extends <TT>Animal</TT> and
+      implements <TT>Pet</TT>.
+      <OL>
+        <LI>This class must include a <TT>String</TT>
+	    attribute to store the name of the pet.
+        <LI>Define a constructor that takes one <TT>String</TT> parameter
+	    that specifies the cat's name.  This constructor must also call
+	    the superclass constructor to specify that all cats have four legs.
+        <LI>Define another constructor that takes no parameters.  Have this
+	    constructor call the previous constructor (using the <TT>this</TT>
+	    keyword) and pass an empty string as the argument.
+        <LI>Implement the <TT>Pet</TT> interface methods.
+        <LI>Implement the <TT>eat</TT> method.
+      </OL>
+      <P>
+
+  <LI>Create the <TT>Fish</TT> class.  Override the <TT>Animal</TT> methods
+      to specify that fish can't walk and don't have legs.
+      <P>
+
+  <LI>Create an <TT>TestAnimals</TT> program.  Have the <TT>main</TT> method
+      create and manipulate instances of the classes you created above.
+      Start with:
+<PRE>
+Fish d = new Fish();
+Cat c = new Cat("Fluffy");
+Animal a = new Fish();
+Animal e = new Spider();
+Pet p = new Cat();
+</PRE>
+      Experiment by: a) calling the methods in each object, b) casting objects,
+      c) using polymorphism, and d) using <TT>super</TT> to call super
+      class methods.
+      <P>
+
+</OL>
+
+</P>
+
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,157 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module15: Exercise #1: Implement Object Serialization</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module15: Advanced I/O</H2>
+<H3>Exercise #1: Implement Object Serialization</H3>
+<H3>(Level 1)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will read and write a serialized object from and to a file.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+
+<CENTER><IMG SRC="UML.gif" ALT="UML Diagram of Family/Person Classes"></CENTER>
+
+
+<OL>
+
+<H4>Write the <TT>Family</TT> Class</H4>
+
+<P>
+The <TT>Family</TT> class has been implemented for you.  However, you will
+need to modify it to support serialization.
+</P>
+
+<P>
+In the <TT>Family.java</TT> file you will find comment blocks
+that start and end with <TT>/*** ... ***/</TT>.  These comments indicate
+the location in the code that you must supply.
+</P>
+
+  <LI>Declare that the <TT>Family</TT> class is serializable.
+      <P>
+
+
+<H4>Write the <TT>Person</TT> Class</H4>
+
+<P>
+The <TT>Person</TT> class has been implemented for you.  However, you will
+need to modify it to support serialization.
+</P>
+
+<P>
+In the <TT>Person.java</TT> file you will find comment blocks
+that start and end with <TT>/*** ... ***/</TT>.  These comments indicate
+the location in the code that you must supply.
+</P>
+
+  <LI>Declare that the <TT>Person</TT> class is serializable.
+      <P>
+
+  <LI>The <TT>numOfSiblings</TT> attribute is calculated on-the-fly,
+      so it does not need to be serialized.  Modify the <TT>numOfSiblings</TT>
+      declaration to specify that this attribute is not to be serialized.
+      <P>
+
+  <LI>The <TT>getNumberOfSiblings</TT> method returns the number of siblings
+      for this person.  Since the <TT>numOfSiblings</TT> attribute is calculated
+      on-the-fly, this method must check if this attribute has been set yet
+      (if it is zero, it has not been set) and then perform the calculation
+      if it has not been set.  The calculation is: subtract one from the
+      total number of children in this person's family.  Make sure that you
+      print out a message to the standard out stating that the calculation is
+      being performed.  Finally, this method must return the calculated value.
+      <P>
+
+
+<H4>Complete the <TT>WriteFamilies</TT> Program</H4>
+
+<P>
+This program creates three families and the people in them.  It sets
+up the relationships between the families and the parents.  It then
+queries the "number of siblings" for Pat Willcutt and Bryan Basham
+to demonstrate the calculation of a transient field.
+</P>
+
+<P>
+In the <TT>WriteFamilies.java</TT> file you will find comment blocks
+that start and end with <TT>/*** ... ***/</TT>.  These comments indicate
+the location in the code that you must supply.
+</P>
+
+  <LI>Edit the <TT>WriteFamilies</TT> class file to include the code
+      to declare and initialize the object stream variable.  Name the
+      file containing the family objects: <TT>families.ser</TT>.
+      <P>
+
+  <LI>Add the code to write the three families to the output object stream.
+      Don't forget to close the top-level stream.
+      <P>
+
+  <LI>Compile and run this program.  You see the following output.
+      Also, the file <TT>families.ser</TT> should now exist.
+<PRE>
+Calculating number of siblings for Pat Willicutt
+Pat Willicutt has 4 sibilings.
+Calculating number of siblings for Bryan Basham
+Bryan Basham has 2 sibilings.
+</PRE>
+      <P>
+
+
+<H4>Complete the <TT>ReadFamilies</TT> Class</H4>
+
+<P>
+This program assumes that three families have been written to the
+<TT>families.ser</TT> file.  This program will read the three families and
+retrieve the <TT>Person</TT> object for Pat Willcutt and Bryan Basham.  Finally,
+the program queries the "number of siblings" for Pat and Bryan
+to demonstrate that the transient field <TT>numOfSiblings</TT> was not
+save in the object file and had to be recalculated.
+</P>
+
+<P>
+In the <TT>ReadFamilies.java</TT> file you will find comment blocks
+that start and end with <TT>/*** ... ***/</TT>.  These comments indicate
+the location in the code that you must supply.
+</P>
+
+  <LI>Edit the <TT>ReadFamilies</TT> program file to include the code
+      to declare and initialize the input object stream variable.
+      <P>
+
+  <LI>Add the code to read the three families from the input object stream.
+      Don't forget to close the top-level stream.
+      <P>
+
+  <LI>Compile and run this program.  You see the following output.
+<PRE>
+Calculating number of siblings for Pat Willicutt
+Pat Willicutt has 4 sibilings.
+Calculating number of siblings for Bryan Basham
+Bryan Basham has 2 sibilings.
+</PRE>
+      <P>
+
+</OL>
+
+</P>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,212 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module16: Exercise #1: Finish the ChatClient</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module16: Networks</H2>
+<H3>Exercise #1: Finish the ChatClient</H3>
+<H3>(Level 2)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will finish the "chat room" client program.  Your
+client will connect to a "chat server" so that you may chat with other
+students in the class.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+Start by changing your working directory to <TT>SL275/mod16/exercise1</TT>
+on your computer.  Copy the previous ChatRoom files in this working directory.
+</P>
+
+<OL>
+
+  <LI>In the <TT>launchFrame</TT> method, you need to make the connection
+      to the server (make a socket connection).
+      <P>
+
+  <LI>You need to get streams (input and output) from the socket connection
+      so that you can send your messages to the server, and receive other
+      messages from the server.
+      <P>
+
+  <LI>You need a <TT>RemoteReader</TT> -- a runnable object -- which can be
+      run by a thread and continually listen for input on the input stream
+      you got from the socket.
+      <P>
+
+  <LI>You need to modify the <TT>actionPerformed</TT> method so that when the
+      user clicks the "send" button you send the text of the message 
+      <EM>to the server</EM> (using the output stream) rather than putting it into
+      the text area.
+      <P>
+
+  <LI>You need to modify the action listener on the "input" text field to
+      do the same as above (send the message to the server).
+      <P>
+
+  <LI>You need to have the <TT>RemoteReader</TT> object put the 
+      incoming messages into the text area.
+      <P>
+
+</OL>
+
+<B>Good luck and have fun!</B>
+
+<FONT COLOR=blue><H4>Hints</H4></FONT>
+
+<OL>
+
+  <LI>You need instance variables for input and output streams and the socket.
+Do NOT make these local variables.
+      
+<PRE>
+Socket connection;
+PrintStream serverOut;
+BufferedReader serverIn;
+</PRE>
+      <P>
+
+  <LI><TT>RemoteReader</TT> implements <TT>Runnable</TT> should be an inner class.
+      
+      <P>
+
+  <LI>Put all the connection code (and get the streams) in the <TT>launchFrame</TT> method.
+      
+      <P>
+
+  <LI>Instantiate RemoteReader (<TT>RemoteReader r = new RemoteReader();</TT>) in your
+<TT>launchFrame</TT> method, then instantiate a Thread object using <TT>r</TT> as the runnable target.
+      
+      <P>
+
+  <LI>Start the thread for the RemoteReader (<TT>t.start();</TT>) as the last thing you
+do before making your Frame visible.
+      
+      <P>
+
+  <LI>Don't forget you are using two new packages <TT>java.io</TT> and <TT>java.net</TT>.
+      
+      <P>
+
+  <LI>Your RemoteReaders should have a <TT>run</TT> method which runs in a <TT>while(true)</TT> loop.
+      
+      <P>
+
+  <LI>Don't forget to surround your risky code (like anything connected with
+reading, sockets, etc.) in a try/catch block!
+      
+      <P>
+
+</OL>
+
+<FONT COLOR=blue><H4>General How-to</H4></FONT>
+
+<OL>
+
+  <LI>How to make a socket:
+<PRE>
+connection = new Socket(hostnameOrIP,portNum);
+Example: connection = new Socket("127.0.0.1",2000);
+</PRE>
+      <P>
+
+  <LI>How to get streams from the socket:
+<PRE>
+serverIn = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+serverOut = new PrintStream(connection.getOutputStream());
+</PRE>
+      <P>
+
+  <LI>How to write to a PrintStream (a type of output stream)
+<PRE>
+serverOut.println("Yippy Skippy");
+</PRE>
+      <P>
+
+  <LI>How to read from a BufferedReader:
+<PRE>
+String aLine = serverIn.readLine(); 
+// This blocks until there is something to read.
+</PRE>
+      <P>
+
+</OL>
+
+</P>
+
+
+<FONT COLOR=blue><H4>General Format of Your Class:</H4></FONT>
+
+<PRE>
+// Many import statements
+
+public class ChatClient {
+
+  // lots of instance variables for send button, socket, streams, etc.
+
+  public ChatClient() {
+    // initialize GUI components and other data
+  }
+
+  public void launchFrame() {
+    // make the GUI
+
+    // establish socket connection
+
+    // make a thread and start it with an instance of RemoteReader
+
+    // create/instantiate the streams from the socket connection
+
+    // show the gui
+  }
+
+  // the inner class listening for the send button
+  private class SendListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+      // get info from text field
+
+      // send it to the server using the printstream object
+
+      // clear the text field
+    }
+  }
+
+  // an inner class to listen to server
+  private class RemoteReader implements Runnable { 
+    public void run() {
+      try {
+        while(true) {
+	  // do stuff here to continuously read from the server using the 
+
+	  // input stream you made
+
+	  // put the received text into the text area
+	}
+      }
+    }
+  }
+
+  public static void main(String[] args) {
+    // create an instance of ChatClient
+
+    // call the launchFrame method
+  }
+
+}
+</PRE>
+
+</BODY>
+
+</HTML>

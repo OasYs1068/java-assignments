@@ -1,0 +1,98 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module8: Exercise #1: Handle an Exception</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module8: Exceptions</H2>
+<H3>Exercise #1: Handle an Exception</H3>
+<H3>(Level 1)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will use the <TT>try-catch</TT> block to handle a
+simple runtime exception.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+The <TT>TestExceptions</TT> program prints out all of the command-line
+arguments, but it has a fatal flaw: it will eventually attempt to access
+beyond the <TT>args</TT> array bounds.
+<P>
+
+<PRE>
+public class TestExceptions {
+  public static void main(String[] args) {
+    for ( int i = 0; true; i++ ) {
+      System.out.println("args[" + i + "] is '" + args[i] + "'");
+    }
+  }
+}
+</PRE>
+
+<P>
+<FONT COLOR=blue>
+Note: The code in this program is poorly implemented, because the loop should
+test for the exact size of the <TT>args</TT> array.  However, the purpose
+of this exercise is to give you hands on experience with exceptions and
+how to catch them.
+</FONT>
+</P>
+
+<OL>
+
+  <LI>Compile and run the <TT>TestExceptions</TT> program.  The following is
+      a sample of the output:
+<PRE>
+<B>javac TestExceptions.java</B>
+
+<B>java TestExceptions one two three</B>
+args[0] is 'one'
+args[1] is 'two'
+args[2] is 'three'
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
+	at TestExceptions.main(TestExceptions.java:4)
+</PRE>
+      <P>
+
+  <LI>Modify the <TT>TestExceptions</TT> program to handle the
+      <TT>ArrayIndexOutOfBoundsException</TT> by wrapping the <TT>for</TT>
+      loop in a <TT>try</TT> block.
+      <P>
+
+  <LI>Write a <TT>catch</TT> block that catches that exception and
+      prints out the exception object and then prints that the application
+      is quitting.
+      <P>
+
+  <LI>Re-compile and run the program.  The following is 
+      a sample of the output:
+<PRE>
+<B>javac TestExceptions.java</B>
+
+<B>java2 TestExceptions one two three</B>
+args[0] is 'one'
+args[1] is 'two'
+args[2] is 'three'
+Exception caught: java.lang.ArrayIndexOutOfBoundsException: 3
+Quiting...
+<PRE>
+      <P>
+
+</OL>
+
+</P>
+
+</BODY>
+
+</HTML>

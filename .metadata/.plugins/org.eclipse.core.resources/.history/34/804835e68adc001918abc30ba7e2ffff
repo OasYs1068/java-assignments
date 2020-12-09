@@ -1,0 +1,5 @@
+package myTriangleAndArray;
+
+public class TestMyTrangle {
+		MyTriangle Tri = new MyTriangle(1,1,2,2,3,3);
+}

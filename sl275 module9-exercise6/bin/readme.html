@@ -1,0 +1,67 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module9: Exercise #6: Build an Archive of the Bank Project</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module9: Text-Based Applications</H2>
+<H3>Exercise #6: Build an Archive of the Bank Project</H3>
+<H3>(Level 2)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will create a JAR file of the Banking project.
+You will then run the reports program using only the JAR file.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+Start by changing your working directory to <TT>SL275/mod09/exercise6</TT>
+on your computer.  Copy the previous Banking project files.
+</P>
+
+<OL>
+
+  <LI>Compile and run the <TT>TestBanking</TT> program.
+      <P>
+
+  <LI>Build a Java archive file using the following command:
+<PRE>
+jar cvf banking.jar banking/domain/*.class banking/reports/*.class
+</PRE>
+      
+      <P>
+
+  <LI>Remove all of the class file in the Banking Project packages.
+<PRE>
+rm banking/domain/*.class banking/reports/*.class
+</PRE>
+      <P>
+
+  <LI>Run the <TT>TestBanking</TT> program using the JAR file:
+<PRE>
+java -classpath banking.jar:. TestBanking
+</PRE>
+      <P>
+
+  <LI>Why was the <TT>:.</TT> important in the specification of the
+      <TT>classpath</TT> option?
+      <P>
+
+</OL>
+
+</P>
+
+
+</BODY>
+
+</HTML>

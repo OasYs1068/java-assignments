@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/sl275 module9/src/examples/WriteFile.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_EXCLUDE_TEST_CODE" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="examples.WriteFile"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="1&#13;&#10;2&#13;&#10;3&#13;&#10;4&#13;&#10;6&#13;&#10;5&#13;&#10;7&#13;&#10;8&#13;&#10;9"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="sl275 module9"/>
+</launchConfiguration>

@@ -1,0 +1,185 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module14: Exercise #3: Use Advanced Thread Control</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module14: Threads</H2>
+<H3>Exercise #3: Use Advanced Thread Control</H3>
+<H3>(Level 3)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will use wait/notify and proper thread control to
+create a printer manager.  You will create several threads that generate
+print jobs and a single print manager thread to process those jobs.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+
+<CENTER> <IMG SRC="UML.gif" ALT="The UML Diagram for this exercise"> </CENTER>
+
+<OL>
+
+  <H4>Create the <TT>PrintJob</TT> Class</H4>
+
+  <LI>Create the <TT>PrintJob</TT> class based on the UML diagram.
+      <P>
+
+  <H4>Create the <TT>Producer</TT> Class</H4>
+
+  <LI>Create the <TT>Producer</TT> class based on the UML diagram.
+      It must implement the <TT>Runnable</TT> interface.
+      <P>
+
+  <LI>Write a constructor that initializes all four instance variables.
+      
+      <P>
+
+  <LI>The <TT>run</TT> method must generate a certain number of print jobs,
+      based on the <TT>numberOfJobs</TT> attribute.  Give each of these jobs
+      a name based on the <TT>producerName</TT> and the number of the job.
+      The number of pages in the print job is specified by the <TT>sizeOfJobs</TT>
+      attribute.
+      <P>
+
+  <LI>Add the print job to the printer manager via the <TT>addJob</TT> method.
+      This method might throw an <TT>FullQueueException</TT>, write code to
+      handle this occurrance. Print out a message that the producer is adding
+      a job to the print queue.
+      <P>
+
+  <LI>Between print jobs the producer must sleep based on the <TT>delayBetweenJobs</TT> attribute.
+      
+      <P>
+
+  <H4>Create the <TT>Printer</TT> Class</H4>
+
+  <LI>Create the <TT>Printer</TT> class based on the UML diagram.
+      <P>
+
+  <LI>Write a contructor that initializes the attributes appropriately.
+      The print queue should be big enough to handle five simultaneous jobs.
+      <P>
+
+  <LI>You may want to implement this class as a Singleton.
+      <P>
+
+  <LI>The <TT>printQueue</TT> attribute is a FIFO queue that holds all
+      print jobs that have been posted to this printer.  I have included
+      the Java classes that you need for this data structure.  <TT>Queue</TT>
+      is an interface of FIFO queues.  <TT>CircularQueue</TT> implements a
+      fixed-length queue.  The <TT>FullQueueException</TT> and <TT>EmptyQueueException</TT>
+      are thrown by the <TT>addBack</TT> and <TT>removeFront</TT> methods
+      respectively.
+      <P>
+
+  <LI>Write a public, synchronized <TT>addJob</TT> method.  This method might
+      throw a <TT>FullQueueException</TT>.
+      <P>
+
+  <LI>Write a private, synchronized <TT>getJob</TT> method.  This method might
+      throw a <TT>EmptyQueueException</TT>.
+      <P>
+
+  <LI>Write the public, synchronized <TT>halt</TT> method.  This method should
+      set the <TT>stateIsRunning</TT> to <TT>false</TT>.
+      <P>
+
+  <LI>Write the <TT>run</TT> method.  This is the heart of the print manager.
+      It must loop continueously, until it has been halted.  It must retrieve
+      a print job off the queue, print out that the job is starting (and give
+      the name of the job), process the job (by sleeping a certain number of
+      milliseconds per page; 500ms/page is a good value), and then print out
+      that the job has completed.  If no job is available, print out that the
+      printer is waiting for a job.
+      <P>
+
+  <LI>The hard part of this exercise is where to use <TT>wait</TT> and
+      <TT>notify</TT>.  <FONT COLOR=blue>Hint: "synchronize" the wait/notify
+      on the <TT>Printer</TT> object.</FONT>
+      <P>
+
+
+  <H4>Create the <TT>TestPrinter</TT> Program</H4>
+
+  <LI>This class only contains a <TT>main</TT> method.
+      
+      <P>
+
+  <LI>Have the <TT>main</TT> method create three producers, with differentt
+      printing characteristics: from small (5 page) to large (25 page) job
+      sizes, and short (2 sec) to long (10 sec) delays between jobs.
+      <P>
+
+  <LI>Create a thread for the printer manager.  Set the priority of this
+      job to the maximum. Start this thread.
+      <P>
+
+  <LI>Create three threads for each producer.  Start the threads.
+      <P>
+
+  <LI>Wait for each producer thread to finish, using the <TT>join</TT> method.
+      <P>
+
+  <LI>Finally, halt the printer manager.
+      <P>
+
+</OL>
+
+Below is an example output:
+<PRE>
+  C: Print manager is starting up.
+  C: Waiting on a job to print.
+P: Adding job 'Fred#1' to the queue
+  C: Starting job 'Fred#1'
+P: Adding job 'Elizabeth#1' to the queue
+P: Adding job 'Simon#1' to the queue
+  C: Completed job 'Fred#1'
+  C: Starting job 'Elizabeth#1'
+P: Adding job 'Fred#2' to the queue
+P: Adding job 'Simon#2' to the queue
+  C: Completed job 'Elizabeth#1'
+  C: Starting job 'Simon#1'
+P: Adding job 'Fred#3' to the queue
+  C: Completed job 'Simon#1'
+  C: Starting job 'Fred#2'
+P: Adding job 'Elizabeth#2' to the queue
+P: Adding job 'Simon#3' to the queue
+  C: Completed job 'Fred#2'
+  C: Starting job 'Simon#2'
+  C: Completed job 'Simon#2'
+  C: Starting job 'Fred#3'
+P: Adding job 'Fred#4' to the queue
+  C: Completed job 'Fred#3'
+  C: Starting job 'Elizabeth#2'
+P: Adding job 'Fred#5' to the queue
+  C: Completed job 'Elizabeth#2'
+  C: Starting job 'Simon#3'
+P: Adding job 'Elizabeth#3' to the queue
+  C: Completed job 'Simon#3'
+  C: Starting job 'Fred#4'
+  C: Completed job 'Fred#4'
+  C: Starting job 'Fred#5'
+  C: Completed job 'Fred#5'
+  C: Starting job 'Elizabeth#3'
+  C: Completed job 'Elizabeth#3'
+  C: Waiting on a job to print.
+  C: Print manager is halted.
+</PRE>
+
+</P>
+
+</BODY>
+
+</HTML>

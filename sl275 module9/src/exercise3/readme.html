@@ -1,0 +1,114 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module9: Exercise #3: Use Collections to Represent Multiplicity</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module9: Text-Based Applications</H2>
+<H3>Exercise #3: Use Collections to Represent Multiplicity</H3>
+<H3>(Level 2)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will replace the arrays code that you used to implement
+multiplicity in the relationships between bank and customer, and customer and
+their accounts.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+Start by changing your working directory to <TT>SL275/mod09/exercise3</TT>
+on your computer.  Copy the previous Banking project files.
+</P>
+
+<CENTER> <IMG SRC="UML.gif" BORDER=0> </CENTER>
+
+
+<H4>Modify the <TT>Bank</TT> Class</H4>
+
+<P>
+Modify the <TT>Bank</TT> class to use an <TT>ArrayList</TT> to
+implement the multiplicty on the <TT>customers</TT> association. Don't forget
+to import the necessary <TT>java.util</TT> classes.
+
+<OL>
+
+  <LI>Modify the declaration for the <TT>customers</TT> attribute to be
+      of type <TT>List</TT> and drop the <TT>numberOfCustomers</TT> attribute.
+      <P>
+
+  <LI>Modify the <TT>Bank</TT> constructor to initialize the <TT>customers</TT>
+      attribute to be a new <TT>ArrayList</TT> object.
+      <P>
+
+  <LI>Modify the <TT>addCustomer</TT> method to use the <TT>add</TT> method.
+      <P>
+
+  <LI>Modify the <TT>getCustomer</TT> method to use the <TT>get</TT> method.
+      <P>
+
+  <LI>Modify the <TT>getNumOfCustomers</TT> method to use the <TT>size</TT> method.
+      <P>
+
+</OL>
+
+</P>
+
+
+<H4>Modify the <TT>Customer</TT> Class</H4>
+
+<P>
+Modify the <TT>Customer</TT> class to use an <TT>ArrayList</TT> to
+implement the multiplicty on the <TT>accounts</TT> association. Perform the same
+modifications as above.
+</P>
+
+
+<H4>Compile and Run the <TT>TestBanking</TT> Program</H4>
+
+<P>
+At this point there is no need to modify the <TT>CustomerReport</TT> code,
+because we have not altered the interface of the <TT>Bank</TT> and <TT>Customer</TT>
+classes.  Compile and run the <TT>TestBanking</TT> program and you should see
+the same output as before.
+</P>
+
+
+<H4><FONT COLOR=blue>Optional:</FONT> Modify the <TT>CustomerReport</TT> Class</H4>
+
+<P>
+Modify the <TT>CustomerReport</TT> class to use an <TT>ArrayList</TT> to
+implement the multiplicty on the accounts association. Perform the same
+modifications as above.
+
+<OL>
+
+  <LI>In the <TT>Bank</TT> class, add a method called <TT>getCustomers</TT>
+      that returns an <TT>Iterator</TT> on the <TT>customers</TT> list.
+      <P>
+
+  <LI>In the <TT>Customer</TT> class, add a method called <TT>getAccounts</TT>
+      that returns an <TT>Iterator</TT> on the <TT>accounts</TT> list.
+      <P>
+
+  <LI>Modify the <TT>CustomerReport</TT> class to use a pair of nested
+      <TT>while</TT> loops that iterate over the customer's iterator and
+      the account's iterator; instead of using the nested <TT>for</TT> loops.
+      <P>
+<TT></TT>
+</OL>
+
+</P>
+
+</BODY>
+
+</HTML>

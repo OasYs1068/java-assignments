@@ -1,0 +1,79 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module9: Exercise #5: Document the Customer Class</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module9: Text-Based Applications</H2>
+<H3>Exercise #5: Document the Customer Class</H3>
+<H3>(Level 1)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will use <TT>javadoc</TT> comment tags to document
+the <TT>Customer</TT> class.  You will then generate the API documentation
+for the entire <TT>banking</TT> package.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+Start by changing your working directory to <TT>SL275/mod09/exercise5</TT>
+on your computer.  Copy the previous Banking project files.
+</P>
+
+<OL>
+
+  <LI>Comment the declarations of the <TT>Customer</TT> class using a variety
+      of javadoc tags.  Make sure you use the <TT>@param</TT> and <TT>@returns</TT>
+      tags on the appropriate declarations.
+      <P>
+
+  <LI>Run the javadoc tool over the complete set of classes to generate the public
+      API documentation as follows:
+<PRE>
+javadoc -d doc/api/public banking.domain banking.reports
+</PRE>
+      <P>
+      When you have done this, <A HREF="doc/api/public/index.html">click here</A>
+      to view the generated documentation.
+      <P>
+
+  <LI>Run the javadoc tool over the complete set of classes to generate the private
+      API documentation as follows:
+<PRE>
+javadoc -private -d doc/api/private banking.domain banking.reports
+</PRE>
+      <P>
+      When you have done this, <A HREF="doc/api/private/index.html">click here</A>
+      to view the generated documentation.
+      <P>
+
+</OL>
+
+</P>
+
+
+<H3>Solution Documentation</H3>
+
+<UL>
+
+  <LI><A HREF="solution/doc/api/public/index.html">public API documentation</A>
+      <P>
+
+  <LI><A HREF="solution/doc/api/private/index.html">private API documentation</A>
+
+</UL>
+
+
+</BODY>
+
+</HTML>

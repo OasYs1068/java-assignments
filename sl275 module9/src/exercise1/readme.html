@@ -1,0 +1,62 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module9: Exercise #1: Write a File with Numbered Lines</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module9: Text-Based Applications</H2>
+<H3>Exercise #1: Write a File with Numbered Lines</H3>
+<H3>(Level 1)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will create a program to read text from standard input
+and write it to a file with each line prefixed with a line-number count.
+This file will be specified by a command-line argument.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+
+<OL><TT></TT>
+
+  <LI>Create a program called <TT>TestLineNumbering</TT> that accepts one
+      command-line argument, the name of a file. Your code should verify
+      that the command-line argument was specified.
+      <P>
+
+  <LI>Declare a variable that holds a <TT>File</TT> object that is initialized
+      from the file named in the first command-line argument.
+      <P>
+
+  <LI>Within a <TT>try-catch</TT> block, create a buffered, input stream
+      reader based on the <TT>System.in</TT> stream (standard input).
+      <P>
+
+  <LI>Also, create a print file writer based on the <TT>File</TT> variable.
+      <P>
+
+  <LI>Write the <TT>while</TT> loop that reads each line from the console
+      input stream and prints the line out to the file.  Each line should
+      be prepended with the count of the line number.
+      <P>
+
+  <LI>Make sure to close the I/O streams.
+      <P>
+
+</OL>
+
+</P>
+
+</BODY>
+
+</HTML>

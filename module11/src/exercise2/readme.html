@@ -1,0 +1,65 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module11: Exercise #2: Create a Calculator GUI, Part II</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module11: GUI Event Handling</H2>
+<H3>Exercise #2: Create a Calculator GUI, Part II</H3>
+<H3>(Level 2)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will complete the implementation of the "calculator" GUI.
+You will create the event handlers that satisfy "calculator" behavior.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+Start by coping the <TT>CalculatorGUI</TT> class file into your working directory.
+</P>
+
+<P>
+You task is to implement the <TT>ActionListener</TT> handlers for each of
+the buttons in the GUI.  To make your job easier, you may wish to copy the
+<TT>Calculator</TT> class in the <TT>solution</TT> directory.  You can use
+an instance of this class as the model of "calculator" behavior.  The
+behavior of this object is very simple.  There is a method for each operation
+(<TT>opAdd</TT>, <TT>opSubtract</TT>, <TT>opMultiply</TT>, and <TT>opDivide</TT>)
+and the equals sign (<TT>opEquals</TT>).  Each of these methods takes a single
+number (of type <TT>String</TT>) and returns a result (also of type <TT>String</TT>).
+Here is an example:
+<PRE>
+...
+  Calculator calc = new Calculator();
+  String result;
+
+  result = calc.opMultiply("3.25");  // result is "3.25"
+  result = calc.opAdd("2");          // result is "6.5"
+  result = calc.opEquals("5");       // result is "11.5"
+...
+</PRE>
+</P>
+
+<P>
+Using a model allows you to separate the logic of the applications behavior
+from the presentation and control of the application.  This is a classic
+example of the design pattern of Model-View-Controller.  In this case the
+<TT>Calculator</TT> class implements the model and the <TT>CalculatorGUI</TT>
+class implements both the view (the buttons, frame and layout) and the
+controller (the event handlers).
+</P>
+
+<TT></TT>
+</BODY>
+
+</HTML>

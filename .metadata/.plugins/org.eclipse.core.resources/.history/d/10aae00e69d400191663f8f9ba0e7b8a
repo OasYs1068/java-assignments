@@ -1,0 +1,17 @@
+package exercise3;
+
+public class StringSearch {
+		private String str1,str2;
+		StringBuffer strBuffer
+		
+		str1 = new String();
+		
+		public int getLength(String parastr) {
+			return String.length(parastr);
+		}
+		
+		public boolean isSubString(String[] para1,String[] para2) {
+			
+		}
+		
+}

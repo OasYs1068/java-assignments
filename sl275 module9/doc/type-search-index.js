@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"Account","h":"","u":""},{"l":"Bank","h":"","u":""},{"l":"CheckingAccount","h":"","u":""},{"l":"Customer","h":"","u":""},{"l":"CustomerReport","h":"","u":""},{"l":"SavingsAccount","h":"","u":""},{"l":"所有类","h":"","u":"allclasses-index.html"}]

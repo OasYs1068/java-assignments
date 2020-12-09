@@ -1,0 +1,49 @@
+<HTML>
+
+<HEAD>
+   <TITLE>SL275: Module9: Exercise #2: Develop a Directory Listing Program</TITLE>
+</HEAD>
+
+<BODY  BGCOLOR=white>
+
+
+<CENTER>
+<H2>SL275: Module9: Text-Based Applications</H2>
+<H3>Exercise #2: Develop a Directory Listing Program</H3>
+<H3>(Level 3)</H3>
+</CENTER>
+
+
+<H3>Objective</H3>
+
+<P>
+In this exercise you will create a program to print out a directory listing
+for the directory specified by the last command-line argument (or the
+current working directory, if no argument was specified).  You will also
+use a command-line switch, <TT>-R</TT>, to specify whether or not to
+recursively descend into the directory tree.
+</P>
+
+
+<H3>Directions</H3>
+
+<P>
+Create a program called <TT>DirListing</TT> that takes a command-line
+argument to specify a directory that you wish to be listed.  Furthermore,
+two command-line switches must be supported.  The <TT>-verbose</TT> switch
+tells the program to display the size of the file and date last modified;
+"non-verbose" mode just shows the file name.  The <TT>-R</TT> switch tells
+the program to show the directory specified and recursively descend into
+the sub-directories and display these (with some spacing for indentation).
+</P>
+
+<P>
+Usage:
+<PRE>
+java DirListing [-R] [-verbose] [directory]
+</PRE>
+</P>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,9 @@
+package exercise3;
+
+final class TestStrSearch {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
